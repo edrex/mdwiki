@@ -1,6 +1,38 @@
 # Web Shell
 
-A tiny shell for browser based content editors.
+A tiny shell for browser based content editor apps.
+
+Equivalently, an ala carté CMS for static sites.
+
+## Technical architecture
+
+ - Runtime component registration via ES6/commonjs modules
+ - Services dependency injected as Shell environment provides services (storage provider etc).
+
+
+* *Decouple apps from their storage*:  Abstract StorageProvider interface
+  - [ ] Local (IndexedDB)
+  - [ ] Webdav
+  - [ ] IPFS
+  - [ ] Tiddlywiki file storage
+  - [ ] Tiddlyweb server
+* [ ] Run [Metalsmith](https://github.com/metalsmith/metalsmith) pipelines through the browser?
+
+
+* [ ] interface 
+  * [ ] local DB (indexeddb)
+  * 
+
+
+
+* [ ] interface HtmlApp
+  - [ ] Instantiated in an iframe subdomain
+  - shell injects dependencies via [jspm](http://jspm.io/) manifest.
+  - Interfaces are dependency injected via a load-time manifest (jspm.conf)
+  - suborigin sandboxing
+* Apps installed by dragging URL to "new app" button
+
+Prosemirror Demo App
 
 http://codepen.io/edrex/full/ONNqLx/
 
